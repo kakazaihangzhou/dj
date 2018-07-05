@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--这个货要加，不然beforesuite不出现-->
+<suite name="test">
+    <test name="login">
+        <classes>
+            <class name="suite.suiteConfig"/>
+            <class name="suite.logintest"/>
+            <!--<class name="suite.paytest"/>，直接一起执行也没问题-->
+        </classes>
+    </test>
+
+    <test name="pay">
+        <classes>
+            <class name="suite.suiteConfig"/>
+            <class name="suite.paytest"/>
+        </classes>
+    </test>
+
+</suite>
+
+        <!--before suite-->
+        <!--before test-->
+        <!--登陆成功-->
+        <!--after test-->
+        <!--before test-->
+        <!--支付成功-->
+        <!--after test-->
+        <!--after suite-->
